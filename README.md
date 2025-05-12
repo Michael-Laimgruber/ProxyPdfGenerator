@@ -21,7 +21,7 @@ CREATE PDF
 EXPORT
 ------------
 
-* **Export** your cards via the **Export** button and a A4 PDF with crop marks will be automatically downloaded
+* **Export** your cards via the **Export** button and an A4 PDF with crop marks will be automatically downloaded
 
 ------------
 Sample Cards
