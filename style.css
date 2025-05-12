@@ -1,0 +1,370 @@
+body {
+  display: flex;
+  justify-content: center; /* Horizontally centers the .container */
+  align-items: flex-start;     /* Vertically centers the .container */
+  height: 100vh;           /* Full viewport height */
+  margin: 10px;               /* Remove default margin */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: left;
+  background-color: #dfdfdf;
+  justify-content: center; /* Centers child elements vertically inside .container */
+  border-radius: 12px;
+}
+
+/* Navbar Styling */
+.top_navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* optional: vertical alignment */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.headline h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+
+/* ############### NAV BARS ################ */
+
+.mid_navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0px;
+/*   background-color: #b15c5c; */
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.switch_navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0px;
+/*   background-color: #923434; */
+  color: white;
+  padding: 0px;
+  border-radius: 6px;
+}
+
+
+
+/* ##### SWITCH FOR REGISTRATION MARKS CUTTER PLOTTER ###### */
+
+.switch_registration_mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px; /* space between switch and text */
+  margin-top: 0px;
+/*   background-color: rgb(52, 179, 27); */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin: 2px;
+  
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0056b3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+/* Buttons container */
+.buttons {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between buttons */
+}
+
+/* Button Styling */
+button {
+  margin: 30;
+  padding: 22px 44px;
+  font-size: 18px;
+  background-color: #9b9b9b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+/* Optional: Add focus styles for accessibility */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}
+
+
+
+/* ##### PREVIEW CELLS ###### */
+
+
+#preview {
+  background-color: #d4d4d4;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* max 3 cols */
+  max-width: 630px; /* 3 * 150px + etwas Abstand */
+  gap: 10px;
+  margin: 0 auto; /* horizontal zentrieren */
+  margin-top: 20px;
+  border-radius: 6px;
+  
+
+}
+
+.preview-cell {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #999;
+  cursor: pointer;
+  
+}
+
+.preview-cell img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+ .add-btn {
+     font-size: 48px;
+     color: #888;
+} 
+
+.delete-btn {
+  position: absolute;
+  bottom: 5px;
+  left: 50%; /* Still centers the anchor point */
+  background: rgb(161, 161, 161);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 18px;
+  opacity: 0.6; 
+
+  /* No horizontal shift */
+  transform: translateX(-50%);
+  transition: transform 0.2s ease;
+  
+}
+
+.delete-btn:hover {
+  /* Scale only — no movement */
+  transform: translateX(-50%) scale(1.1);
+  background: rgb(212, 212, 212);
+  opacity: 0.9; 
+}
+
+.preview-cell:hover {
+
+    box-shadow: 0 0 20px rgba(116, 116, 116, 0.7);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+
+ /* #preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: flex-start;
+  
+}
+
+ .preview-cell {
+     width: 200px;
+     height: 280px;
+     border: 1px dashed #aaa;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     background-color: #f9f9f9;
+     cursor: pointer;
+
+}
+
+.preview-cell:hover {
+
+    box-shadow: 0 0 20px rgba(116, 116, 116, 0.7);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+ .preview-cell img {
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: cover;
+}
+
+
+ .add-btn {
+     font-size: 48px;
+     color: #888;
+} */
+
+
+
+/* ##### DELETE BUTTON IN CELL ###### */
+
+
+
+
+
+
+
+
+
+
+/*
+
+#################################### FROM HERE IS TEMPORARY ###################################
+
+
+*/
+
+
+
+
+
+
+
+
+
+/*
+
+#################################### FROM HERE IS UNTESTED ###################################
+
+
+*/
+
+
+
+
+
+/* Rote Leiste unten mit Löschen-Button */
+ .preview-cell.dragging {
+     opacity: 0.5;
+     box-shadow: 0 0 10px #993d3d;
+}
+
+
+/* .preview-cell.drop-target {
+     border: 8px inset #656565;
+}
+ */
+
+
+ .preview-cell.drop-target img {
+     transform: scale(1.1);
+    /* Bild um 10% vergrößern */
+     opacity: 0.5;
+    /* Standardmäßige Transparenz */
+     transition: transform 0.2s ease, opacity 0.2s ease;
+    /* Sanfte Übergänge für beide Eigenschaften */
+}
+
+
+/* Stil für das Kontextmenü */
+
+ .context-menu {
+     position: absolute;
+     background-color: white;
+     border: 1px solid #ccc;
+     padding: 10px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     z-index: 1000;
+}
+
+
+ .context-menu button {
+     background-color: red;
+     color: white;
+     border: none;
+     padding: 5px 10px;
+     cursor: pointer;
+}
+
+
+ .context-menu button:hover {
+     background-color: darkred;
+}
+
+

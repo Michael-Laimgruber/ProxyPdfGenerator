@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- PDF EXPORTER jsPDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const { jsPDF } = window.jspdf;
+    </script>
+
+
+</head>
+<body>
+
+
+
+<div class = "container">
+
+
+    <div class = "top_navbar">
+
+            <div class ="headline">
+                <h1>PROXY PDF GENERATOR</h1>
+            </div>
+
+    </div>
+
+
+
+    <div class = "mid_navbar">
+
+        <div class="buttons">
+
+            <!-- Upload Button Container -->
+            <div class="button_container">
+                <button id="button_upload">Upload</button>
+            </div>
+
+            <!-- Export Button Container -->
+            <div class="button_container">
+                <button id="button_export">Export</button>
+            </div>
+
+            <!-- Scrape Button Container -->
+            <div class="button_container">
+                <button id="button_scrape">Scrape</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+            <!-- Switch for Registration Marks -->
+<!--     <div class = "switch_navbar">
+
+
+        <div class="switch_registration_mark">
+            <span class="switch-label">Add Registration Marks To Exported PDF</span> 
+            <label class="switch">
+                <input type="checkbox" id="regMarksToggle">
+                <span class="slider"></span>
+            </label>
+
+
+        </div>
+    </div> -->
+
+
+
+<!-- DIV for cell preview -->
+<div id="preview"></div>
+
+
+
+
+
+      <script>
+    // Add event listener to the Scrape button
+    document.getElementById('button_scrape').addEventListener('click', function() {
+      // Open the scrape.html in a new tab
+      window.open("scrape.html", "_blank");
+    });
+  </script>
+
+  
+
+
+
+<!-- 
+    <div class = "main">
+        <div id="preview"></div>
+    </div>
+ -->
+
+</div>
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+
