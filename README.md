@@ -21,3 +21,9 @@ EXPORT
 ------------
 
 * **Export** your cards via the **Export** button and a A4 PDF with crop marks will be automatically downloaded
+
+------------
+Sample Cards
+------------
+
+* **Sample_Cards.zip** to test this tool you can use some random MTG cards
