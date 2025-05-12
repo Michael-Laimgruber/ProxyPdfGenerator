@@ -32,27 +32,29 @@ body {
   border-radius: 6px;
 }
 
+
+
+/* Headline Styling */
+
 .headline h1 {
   margin: 0;
   font-size: 24px;
+  color: white;
 }
 
+/* Remove Standard Browser Styling */
 
-
-.headline h1 a {
-  color: inherit;
-  text-decoration: none;
-  pointer-events: auto;
-}
-
-/* Remove ALL possible styling effects */
+.headline h1 a,
 .headline h1 a:visited,
 .headline h1 a:hover,
 .headline h1 a:active,
 .headline h1 a:focus {
-  color: inherit;
+  color: white; /* gleiche Farbe wie h1 */
   text-decoration: none;
+  pointer-events: auto;
 }
+
+
 
 
 
