@@ -39,6 +39,23 @@ body {
 
 
 
+.headline h1 a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+/* Remove ALL possible styling effects */
+.headline h1 a:visited,
+.headline h1 a:hover,
+.headline h1 a:active,
+.headline h1 a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
 /* ############### NAV BARS ################ */
 
 .mid_navbar{
