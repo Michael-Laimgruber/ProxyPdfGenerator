@@ -1,7 +1,7 @@
 # ProxyPdfGenerator.github.io
 
 
-Create printable PDF's for Magic: The Gathering
+Create printable PDF's for Magic: The Gathering cards in 63x88 mm
 
 ------------
 CREATE PDF
