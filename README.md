@@ -27,4 +27,6 @@ EXPORT
 Sample Cards
 ------------
 
-* **Sample_Cards.zip** to test this tool you can use some random MTG cards
+* **[Sample_Cards.zip](https://github.com/Michael-Laimgruber/ProxyPdfGenerator/raw/refs/heads/main/Sample_Cards.zip)** to test this tool you can use some random MTG cards
+
+
